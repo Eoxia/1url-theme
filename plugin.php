@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Sleeky Backend
-Plugin URI: https://sleeky.flynntes.com
+Plugin Name: 1URL Theme
+Plugin URI: 
 Description: UI overhaul of the YOURLS backend
-Version: 2.4.1
-Author: Flynn Tesoriero
-Author URI: https://flynntes.com
+Version: 1.0.0
+Author: eoxia
+Author URI: 
 */
 
 // No direct call
@@ -23,7 +23,7 @@ function init()
 HEAD;
 }
 
-// Inject Sleeky files
+// Inject sleeky files
 yourls_add_action( 'html_head', 'sleeky_head_scripts' );
 
 function sleeky_head_scripts() {
@@ -46,7 +46,7 @@ function sleeky_head_scripts() {
 	}
 }
 
-// Inject Sleeky files
+// Inject sleeky files
 
 function setTheme($theme) {
 	$url = yourls_plugin_url( __DIR__ );
@@ -81,7 +81,7 @@ HEAD;
 // Register our plugin admin page
 yourls_add_action( 'plugins_loaded', 'sleeky_add_settings' );
 function sleeky_add_settings() {
-	yourls_register_plugin_page( 'sleeky_settings', 'Sleeky Settings', 'sleeky_do_settings_page' );
+	yourls_register_plugin_page( 'sleeky_settings', '1URL Settings', 'sleeky_do_settings_page' );
 	// parameters: page slug, page title, and function that will display the page itself
 }
 

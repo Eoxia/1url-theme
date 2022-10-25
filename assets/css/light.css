@@ -388,7 +388,7 @@ nav ul {
 }
 img.logo {
   
-     width: 190px;
+     width: 90px;
     position: fixed;
     top: 0;
     left: 0;
@@ -620,6 +620,7 @@ body > div > pre {
     z-index: 10;
 }
 #footer p {
+    display: none;
     background: none;
     border: none;
     font-size: 1em;

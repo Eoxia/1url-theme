@@ -1,7 +1,7 @@
-// Sleeky Admin Theme
+// sleeky Admin Theme
 // 2019 Flynn Tesoriero
 
-console.log("Sleeky Admin Theme Running");
+console.log("sleeky Admin Theme Running");
 
 $( document ).ready(function() {
   // Get the theme URL
@@ -74,7 +74,7 @@ $( document ).ready(function() {
 
   } else if ($("body").hasClass("plugin_page_sleeky_settings")) {
     // Tools page
-    console.log("Sleeky Settings Page");
+    console.log("sleeky Settings Page");
 
     handleNav()
 
@@ -142,7 +142,7 @@ $("#wrap").prepend(`<img class="logo" src="${url}/assets/img/logo_white.png">`);
         // Update footer
         var content = $(this).html();
         var i = 77
-        var updated_content = "Running on" + content.slice(13, i) + '& <a href="https://sleeky.flynntes.com/" title="Sleeky">Sleeky</a>' + content.slice(i-1)
+        var updated_content = "Running on" + content.slice(13, i) + '& <a href="https://sleeky.flynntes.com/" title="sleeky">sleeky</a>' + content.slice(i-1)
         $(this).html(updated_content);
       }
   });
