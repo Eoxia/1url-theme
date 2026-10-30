@@ -3,7 +3,7 @@
 Plugin Name: 1URL Theme
 Plugin URI: 
 Description: UI overhaul of the YOURLS backend
-Version: 1.0.0
+Version: 1.0.1
 Author: eoxia
 Author URI: 
 */
@@ -140,8 +140,14 @@ function sleeky_settings_update() {
 }
 
 // Hide admin links for non-authenticated users
-if (yourls_is_valid_user() != 1) {
-	echo <<<HEAD
+// In html_head, not on plugin load: any output before the headers turns redirects into JavaScript ones
+yourls_add_action( 'html_head', 'sleeky_hide_admin_links' );
+
+function sleeky_hide_admin_links()
+{
+	if (yourls_is_valid_user() != 1) {
+		echo <<<HEAD
 		<style>ul#admin_menu li:not(.frontend_link) {display: none}</style>
 HEAD;
+	}
 }
